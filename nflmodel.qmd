@@ -1,0 +1,12 @@
+---
+title: "nflmodel"
+format: pdf
+editor: visual
+---
+
+```{r}
+library(nflverse)
+qb_regular_season_stats <- 
+  load_player_stats(seasons = TRUE) |> 
+  filter(season_type == "REG" & position == "QB")
+```
